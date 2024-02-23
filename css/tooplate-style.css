@@ -340,15 +340,20 @@ b, strong {
   position: absolute;
   width: 75px;
   height: 75px;
-  line-height: 75px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 .timeline-yr span {
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
-  display: block;
-  line-height: 75px;
+  display: flex;
+  align-items: center;
+  line-height: 15px;
+  
 }
 
 .timeline-info {
