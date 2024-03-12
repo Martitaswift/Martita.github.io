@@ -17,9 +17,6 @@
 
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/tooplate-style.css">
-
-    <!-- PRINT STYLE -->
-    <link rel="stylesheet" href="css/print.css">
 	
 	<!-- AGE & YEAR OPERATIONS -->
 	<script>
@@ -80,11 +77,16 @@
                     <!--<li class="nav-item">
                         <a href="#project" class="nav-link"><span data-hover="Destacado">Destacado</span></a>
                     </li>-->
+					<li class="nav-item">
+                        <a href="#laboral" class="nav-link"><span data-hover="Laboral">Laboral</span></a>
+                    </li>
                     <li class="nav-item">
-                        <a href="#resume" class="nav-link"><span data-hover="Formación Académica">Formación Académica</span></a>
+                        <a href="#resume" class="nav-link"><span data-hover="Académico">Académico</span></a>
                     </li>
 					<li class="nav-item">
-                        <a href="#experience" class="nav-link"><span data-hover="Conocimientos">Conocimientos</span></a>
+                        <a href="#experience" class="nav-link"><span data-hover="Experiencia">Experiencia</span></a>
+                    </li><li class="nav-item">
+                        <a href="#knowledge" class="nav-link"><span data-hover="Conocimientos">Conocimientos</span></a>
                     </li>
 					<li class="nav-item">
                         <a href="#abilities" class="nav-link"><span data-hover="Aptitudes">Aptitudes</span></a>
@@ -113,11 +115,10 @@
                 
                 <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
                     <div class="about-text">
-                        <small class="small-text d-print-none">Bienvenido a <span class="mobile-block">mi currículum</span></small>
+                        <small class="small-text">Bienvenido a <span class="mobile-block">mi currículum</span></small>
                         <h1 class="animated animated-text">
-                            <span class="mr-2 print-this">Soy</span>
-							<span class="mr-2 not-show yellow-text">Marta Esparcia</span>
-                                <div class="animated-info d-print-none">
+                            <span class="mr-2">Soy</span>
+                                <div class="animated-info">
 									<span class="animated-item">Marta Esparcia</span>
                                     <span class="animated-item">Ingeniera</span>
                                     <!-- <span class="animated-item">SpeedCuber</span> -->
@@ -125,24 +126,12 @@
                         </h1>
 						
                         <p class="presentation-text">Tengo <script>document.write(age)</script> años, soy Ingeniera Técnico Industrial especializada en Química y en Energías Renovables por la Universidad Politécnica de Madrid.<br><br>Tengo una gran capacidad de trabajo y motivación, estoy interesada en las energías, sobre todo en las renovables y la transformación del futuro energético.</p>
-                        
-						<div class="about-image png not-show profile-image">
-							<img src="images/undraw/profile.png" class="img-fluid" alt="png image">
-							
-						</div>
-						
-						<div class="col-lg-8 mx-auto not-show qr">
-							<h2>Versión Web</h2>
-								<img src="images/undraw/qr-curriculum.png" class="img-fluid" alt="png image">
-						</div>
-						
-						<img src="images/undraw/contact.png" class="img-fluid not-show contact" alt="png image">
-						
+
 						<div class="custom-btn-group mt-4">
                           <a href="pdf/Marta.Esparcia.Lopez-Curriculum.pdf" target="_blank" rel="noopener noreferrer" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Descargar versión PDF</a>
                         </div>
 						
-                        <!-- <div class="custom-btn-group mt-4 d-print-none">
+                        <!-- <div class="custom-btn-group mt-4">
                          
 						  <button id="print-button" class="btn mr-lg-2 custom-btn" onclick="window.print()"><i class='uil uil-file-alt'></i> Descargar versión PDF</button>
 						
@@ -151,7 +140,7 @@
                 </div>
 
                 <div class="col-lg-5 col-md-12 col-12">
-                    <div class="about-image png d-print-none">
+                    <div class="about-image png">
                     
 						<img src="images/undraw/profile.png" class="img-fluid" alt="png image">
 					
@@ -162,7 +151,7 @@
     </section>
 
     <!-- DESTACADO -->
-    <!--<section class="project py-5 d-print-none" id="project">
+    <!--<section class="project py-5" id="project">
         <div class="container">
                 
                 <div class="row">
@@ -213,7 +202,7 @@
     </section> -->
 
     <!-- RESUMEN -->
-    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center">
         <div class="container">
             <div class="row">
 				
@@ -235,7 +224,35 @@
 					
 				</div> -->
 				
-				<div class="col-lg-6 col-12 laboral">
+				<div class="col-lg-6 col-12 laboral" id="laboral">
+                  <h2 class="mb-4 mobile-mt-2">Experiencia Laboral</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2024<br>-<br>2023</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Estudio de viabilidad EELISA<small>Prácticas Curriculares</small></h3>
+                                <p>Prácticas curriculares realizadas en la Universidad Politécnica de Madrid (UPM) en colaboración con European Engineering Learning Innovation and Science Alliance (EELISA) de Septiembre de 2023 a Febrero de 2024.<!--<a href="https://github.com/ETSIDI-py/taller" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="uil:external-link-alt" data-width="15" data-height="15"></a>--></p>
+                            </div>
+                        </div>
+						
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2022</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Instituto de Catálisis y Petroleoquímica (IPC)<small>Prácticas Curriculares</small></h3>
+                                <p>Practicas curriculares realizadas en el Consejo Superior de Investigaciones Científicas (CSIC) entre Febrero y Mayo de 2022.<!--<a href="pdf/TOEICcertificado.pdf" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="uil:external-link-alt" data-width="15" data-height="15"></a>--></p>
+                            </div>
+                        </div>
+							
+                    </div>
+					
+				</div>
+				
+				<div class="col-lg-6 col-12 laboral" id="resume">
                   <h2 class="mb-4 mobile-mt-2">Formación Académica</h2>
 
                     <div class="timeline">
@@ -251,16 +268,6 @@
 						
 						<div class="timeline-wrapper">
                             <div class="timeline-yr">
-                                <span>2024<br>-<br>2023</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>Estudio de viabilidad EELISA<small>Prácticas Curriculares</small></h3>
-                                <p>Prácticas curriculares realizadas en la Universidad Politécnica de Madrid (UPM) en colaboración con European Engineering Learning Innovation and Science Alliance (EELISA) de Septiembre de 2023 a Febrero de 2024.<!--<a href="https://github.com/ETSIDI-py/taller" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="uil:external-link-alt" data-width="15" data-height="15"></a>--></p>
-                            </div>
-                        </div>
-						
-						<div class="timeline-wrapper">
-                            <div class="timeline-yr">
                                 <span>2022<br>-<br>2017</span>
                             </div>
                             <div class="timeline-info">
@@ -268,18 +275,36 @@
                                 <p>Estudios completados en la Escuela Técnica Superior de Ingeniería y Diseño Industrial de Septiembre de 2017 a Julio de 2022<!--<a href="https://github.com/ETSIDI-py/taller" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="uil:external-link-alt" data-width="15" data-height="15"></a>--></p>
                             </div>
                         </div>
-						
+								
 						<div class="timeline-wrapper">
                             <div class="timeline-yr">
-                                <span>2022</span>
+                                <span>2017<br>-<br>2015</span>
                             </div>
                             <div class="timeline-info">
-                                <h3><span>Instituto de Catálisis y Petroleoquímica (IPC)<small>Prácticas Curriculares</small></h3>
-                                <p>Practicas curriculares realizadas en el Consejo Superior de Investigaciones Científicas (CSIC) entre Febrero y Mayo de 2022.<!--<a href="pdf/TOEICcertificado.pdf" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="uil:external-link-alt" data-width="15" data-height="15"></a>--></p>
+                                <h3><span>Bachillerato</span><small>Colegio Claret (Madrid)</small></h3>
+                                <p>Completé mis estudios de bachillerato de 2015 a 2017 en el Colegio Claret de Madrid.<!--<a href="https://www.educa2.madrid.org/web/centro.cp.torresquevedo.coslada" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="uil:external-link-alt" data-width="15" data-height="15"></span></a>--></p>
                             </div>
                         </div>
+							
+                    </div>
+					
+				</div>
+			
+			</div>
+		
+		</div>
+	
+	</section>
+	
+	<!-- EXPERIENCIA -->
+    <section class="experience py-5 d-lg-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+				
+				<div class="col-lg-6 col-12 laboral" id="experience">
+                  <h2 class="mb-4 mobile-mt-2">Experiencia</h2>
 
-                        <div class="timeline-wrapper">
+                    <div class="timeline-wrapper">
                             <div class="timeline-yr">
                                 <span>2021</span>
                             </div>
@@ -318,33 +343,10 @@
                                 <p>De Marzo a Mayo de 2021 realicé este curso (3 horas semanales) impartido por Emerson y organizado por la Sección de estudiantes de ISA de la ETSIDI.<!--<a href="https://www.educa2.madrid.org/web/centro.cp.torresquevedo.coslada" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="uil:external-link-alt" data-width="15" data-height="15"></span></a>--></p>
                             </div>
                         </div>
-								
-						<div class="timeline-wrapper">
-                            <div class="timeline-yr">
-                                <span>2017<br>-<br>2015</span>
-                            </div>
-                            <div class="timeline-info">
-                                <h3><span>Bachillerato</span><small>Colegio Claret (Madrid)</small></h3>
-                                <p>Completé mis estudios de bachillerato de 2015 a 2017 en el Colegio Claret de Madrid.<!--<a href="https://www.educa2.madrid.org/web/centro.cp.torresquevedo.coslada" target="_blank" rel="noopener noreferrer"><span class="iconify" data-icon="uil:external-link-alt" data-width="15" data-height="15"></span></a>--></p>
-                            </div>
-                        </div>
 							
                     </div>
-					
-				</div>
-			
-			</div>
-		
-		</div>
-	
-	</section>
-	
-	<!-- EXPERIENCIA -->
-    <section class="experience py-5 d-lg-flex justify-content-center align-items-center" id="experience">
-        <div class="container">
-            <div class="row">
 				
-                <div class="col-lg-6 col-12 studies">
+                <div class="col-lg-6 col-12 studies" id="knowledge">
                   <h2 class="mb-4">Conocimientos</h2>
 
                     <div class="timeline">
@@ -412,21 +414,22 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
                 
-                <div class="col-lg-8 col-md-12 col-12 d-flex align-items-center">
-                    <div class="about-text habilities">
+                <div class="col-lg-8 col-md-12 col-12 d-flex justify-content-center align-items-center">
+                    <div class="about-text abilities">
                        <center><h2 class="mb-4">Aptitudes</h2></center>
-                        
-						<div class="row d-flex justify-content-center align-items-center">
-							<i><p style="font-size:100%;">
-								<br>•	Trabajo en equipo
-								<br>•	Comunicación
-								<br>•	Generosidad y tolerancia
-								<br>•	Adaptación al medio
-								<br>•	Organización
-								<br>•	Capacidad de aprendizaje y trabajo
-								<br>•	Iniciativa
-							</p></i>
-						</div>
+							<div class="row d-flex justify-content-center">
+								<i><p style="font-size:100%;">
+										<br>•	Trabajo en equipo
+										<br>•	Comunicación
+										<br>•	Generosidad y tolerancia
+										<br>•	Adaptación al medio
+										<br>•	Organización
+										<br>•	Capacidad de aprendizaje y trabajo
+										<br>•	Iniciativa
+									</p></i>
+								</div>
+								
+							</div>
                     </div>
                 </div>
 
@@ -441,7 +444,7 @@
     </section>
 	
 	<!-- REDES -->
-    <!-- <section class="contact py-5 full-screen d-lg-flex d-print-none justify-content-center align-items-center" id="contact">
+    <!-- <section class="contact py-5 full-screen d-lg-flex justify-content-center align-items-center" id="contact">
       <div class="container">
         <div class="row d-flex justify-content-center">
 
@@ -465,7 +468,7 @@
 
     <!-- PIE DE PÁGINA -->
      <footer class="footer py-5">
-          <div class="container d-print-none">
+          <div class="container">
                <div class="row">
 
                     <div class="col-lg-12 col-12">                                
