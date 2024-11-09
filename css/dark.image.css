@@ -1,0 +1,11 @@
+.dark-mode .imagelight{
+	display: none;
+}
+
+.imagedark{
+	display: none;
+}
+
+.dark-mode .imagedark{
+	display: block;
+}
