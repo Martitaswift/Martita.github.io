@@ -38,6 +38,70 @@
 		}
 	</script>
 	
+	<!-- AUTOMATIC DARK MODE BY USER PREFERENCE SCRIPT -->
+	<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const colorModeIcon = document.querySelector('.color-mode-icon'); // Selecciona el icono
+
+            // Función para aplicar el tema oscuro si es necesario
+            function applyTheme() {
+                const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+                if (prefersDarkScheme.matches) {
+                    body.classList.add('dark-mode'); // Agrega la clase .dark-mode
+                    colorModeIcon.classList.add('active'); // Agrega la clase active al icono
+                } else {
+                    body.classList.remove('dark-mode'); // Elimina la clase .dark-mode
+                    colorModeIcon.classList.remove('active'); // Elimina la clase active del icono
+                }
+            }
+
+            // Llama a la función al cargar la página
+            applyTheme();
+
+            // Escucha cambios en la preferencia del tema
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', applyTheme);
+        });
+    </script>
+	
+	<!-- AUTOMATIC LANGUAGE CHANGE BASED ON USER MAIN LANGUAGE -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			// Función para redirigir según el idioma
+			function redirectBasedOnLanguage() {
+				const userLang = navigator.language || navigator.userLanguage; // Obtiene el idioma del navegador
+				const langPrefix = userLang.split('-')[0]; // Extrae el prefijo del idioma (por ejemplo, "en" de "en-US")
+
+				// Verifica si ya se ha guardado la preferencia de idioma
+				const savedLang = localStorage.getItem('preferredLanguage');
+
+				// Si no hay preferencia guardada y el idioma no es español
+				if (!savedLang && langPrefix !== 'es') {
+					window.location.href = 'index_en.html'; // Redirige a la versión en inglés
+				}
+			}
+
+			// Llama a la función al cargar la página
+			redirectBasedOnLanguage();
+
+			// Función para cambiar el idioma y guardar la preferencia
+			function changeLanguage(lang) {
+				localStorage.setItem('preferredLanguage', lang); // Guarda la preferencia de idioma
+				if (lang === 'en') {
+					window.location.href = 'index_en.html'; // Redirige a la versión en inglés
+				}
+			}
+
+			// Escucha el clic en el enlace de idioma
+			const languageLink = document.querySelector('.navbar-brand'); // Selecciona el enlace de idioma
+			languageLink.addEventListener('click', (event) => {
+				event.preventDefault(); // Previene la acción por defecto del enlace
+				changeLanguage('en'); // Cambia el idioma a inglés
+			});
+		});
+	</script>
+	
 	<!-- ICONS -->
 	<script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
 	<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
