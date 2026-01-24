@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta name="robots" content="noindex,nofollow,noarchive,nocache,noimageindex,nosnippet">
+
+    <title>M. Esparcia - Currículum</title>
+	
+	<!-- AGE & YEAR OPERATIONS -->
+	<script>
+		var year=new Date().getFullYear();
+		var month=new Date().getMonth() + 1;
+		var day=new Date().getDate();
+		var age;
+			
+		if (month > 8){
+					
+			age = year - 1999;
+		}else{
+			if (month == 8 && day > 5){
+				age = year - 1999;
+			}else{
+				age = year - 2000;
+			}
+		}
+	</script>
+	
+	<!-- AUTOMATIC DARK MODE BY USER PREFERENCE SCRIPT -->
+	<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const colorModeIcon = document.querySelector('.color-mode-icon'); // Selecciona el icono
+
+            // Función para aplicar el tema oscuro si es necesario
+            function applyTheme() {
+                const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+                if (prefersDarkScheme.matches) {
+                    body.classList.add('dark-mode'); // Agrega la clase .dark-mode
+                    colorModeIcon.classList.add('active'); // Agrega la clase active al icono
+                } else {
+                    body.classList.remove('dark-mode'); // Elimina la clase .dark-mode
+                    colorModeIcon.classList.remove('active'); // Elimina la clase active del icono
+                }
+            }
+
+            // Llama a la función al cargar la página
+            applyTheme();
+
+            // Escucha cambios en la preferencia del tema
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', applyTheme);
+        });
+    </script>
+	
+	<!-- AUTOMATIC LANGUAGE CHANGE BASED ON USER MAIN LANGUAGE -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			// Función para redirigir según el idioma
+			function redirectBasedOnLanguage() {
+				const userLang = navigator.language || navigator.userLanguage; // Obtiene el idioma del navegador
+				const langPrefix = userLang.split('-')[0]; // Extrae el prefijo del idioma (por ejemplo, "en" de "en-US")
+
+				// Verifica si ya se ha guardado la preferencia de idioma
+				const savedLang = localStorage.getItem('preferredLanguage');
+
+				// Si no hay preferencia guardada y el idioma es español
+				if (!savedLang && langPrefix === 'es') {
+					window.location.href = 'index.html'; // Redirige a la versión en español
+				}
+			}
+
+			// Llama a la función al cargar la página
+			redirectBasedOnLanguage();
+
+			// Función para cambiar el idioma y guardar la preferencia
+			function changeLanguage(lang) {
+				localStorage.setItem('preferredLanguage', lang); // Guarda la preferencia de idioma
+				if (lang === 'es') {
+					window.location.href = 'index.html'; // Redirige a la versión en español
+				}
+			}
+
+			// Escucha el clic en el enlace de idioma
+			const languageLink = document.querySelector('.navbar-brand'); // Selecciona el enlace de idioma
+			languageLink.addEventListener('click', (event) => {
+				event.preventDefault(); // Previene la acción por defecto del enlace
+				changeLanguage('es'); // Cambia el idioma a español
+			});
+		});
+	</script>
+	
+	<!-- PRELOAD OF THINGS -->
+	
+		<!-- DNS -->
+		<link rel="dns-prefetch" href="//martitaswift.github.io"/>
+		<link rel="dns-prefetch" href="//github.com"/>
+	
+		<!-- Images -->
+		<link rel="preload" href="images/undraw/profileFN.png" as="image" type="png" />
+		<link rel="preload" href="images/undraw/icon.png" as="image" type="png" media="(max-width: 20px)" />
+		<link rel="preload" href="images/undraw/Urbaser-logotipo.png" as="image" type="png" />
+		<link rel="preload" href="images/undraw/Urbaser-logotipo-dark.svg" as="image" type="svg" />
+	
+		<!-- CSS -->
+		<link rel="preload" href="css/bootstrap.min.css" as="style" />
+		<link rel="preload" href="css/unicons.css" as="style" />
+		<link rel="preload" href="css/owl.carousel.min.css" as="style" />
+		<link rel="preload" href="css/owl.theme.default.min.css" as="style" />
+		<link rel="preload" href="css/dark.image.css" as="style" />
+		<link rel="preload" href="css/tooplate-style.css" as="style" />
+	
+		<!-- Scripts -->
+		<link rel="preload" href="js/jquery-3.3.1.min.js" as="script" />
+		<link rel="preload" href="js/popper.min.js" as="script" />
+		<link rel="preload" href="js/bootstrap.min.js" as="script" />
+		<link rel="preload" href="js/Headroom.js" as="script" />
+		<link rel="preload" href="js/jQuery.headroom.js" as="script" />
+		<link rel="preload" href="js/owl.carousel.min.js" as="script" />
+		<link rel="preload" href="js/smoothscroll.js" as="script" />
+		<link rel="preload" href="js/custom.js" as="script" />
+		<link rel="preload" href="js/navbarfix.js" as="script" />
+		
+		<link rel="preload" href="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js" as="script" />
+		<link rel="preload" href="https://code.iconify.design/2/2.2.1/iconify.min.js" as="script" />
+		<link rel="preload" href="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js" as="script" />
+		<link rel="preload" href="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" as="script" />
+		<link rel="preload" href="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" as="script" />
+	
+	<!-- PAGE ICON -->
+	<link rel="icon" href="images/undraw/icon.png">
+	
+	<!-- STYLES -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/dark.image.css">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+	
+	<!-- ICONS -->
+	<script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+	<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+	<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+	<script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+	  
+	
+	<!--
+	
+					TE AMO MARTA <3 
+	
+		Gracias por existir, eres todo en mi vida
+	
+	-->
+
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            
+			<a href="index.html" rel="noopener noreferrer" class="navbar-brand"><iconify-icon icon="tabler:language" width="20" height="20"></iconify-icon><small> Español</small></a>
+			
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="About me">About me</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#laboral" class="nav-link"><span data-hover="Career">Career</span></a>
+                    </li><li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Academic">Academic</span></a>
+                    </li>
+					<li class="nav-item">
+                        <a href="#experience" class="nav-link"><span data-hover="Experience">Experience</span></a>
+                    </li>
+					</li><li class="nav-item">
+                        <a href="#knowledge" class="nav-link"><span data-hover="Knowledge">Knowledge</span></a>
+                    </li><li class="nav-item">
+                        <a href="#abilities" class="nav-link"><span data-hover="Skills">Skills</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Change theme
+                      </div>
+                    </div>
+                </ul>
+            </div>			
+        </div>
+    </nav>
+
+    <!-- SOBRE MÍ -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center top-fix" id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">Welcome to <span class="mobile-block">my currículum</span></small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">I'm</span>
+                                <div class="animated-info">
+									<span class="animated-item">Marta Esparcia</span>
+                                    <span class="animated-item">Engineer</span>
+                                </div>
+                        </h1>
+						
+                        <p class="presentation-text">I'm <script>document.write(age)</script> years old, I am a qualified Industrial Engineer specializing in Chemistry and hold a Master's degree in Renewable Energy, both from the Polytechnic University of Madrid<br><br>I have a strong interest in the energy sector and the transition towards a more sustainable future. I have specific knowledge of energy, particularly renewables and energy efficiency.<br><br>I stand out for my ability to work in a team, my organizational skills, and my communication skills.</p>
+                        
+						<div class="custom-btn-group mt-4">
+                          <a href="pdf/Marta.Esparcia.Lopez-Curriculum_EN.pdf" target="_blank" rel="noopener noreferrer" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download PDF version</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image png">
+                    
+						<img src="images/undraw/profile.png" class="img-fluid" alt="png image">
+					
+					</div>
+				</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUMEN -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+				
+				<div class="col-lg-6 col-12 laboral" id="laboral">
+                  <h2 class="mb-4 mobile-mt-2">Career</h2>
+
+                    <div class="timeline">
+                       
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2025<br>-<br>2024</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span><img src="images/undraw/Urbaser-logotipo.svg" class="img-fluid imagelight" width="300" height="300"><img src="images/undraw/Urbaser-logotipo-dark.svg" class="img-fluid imagedark" width="300" height="300"><small>Energy Department</small></h3>
+                                <p>Technical engineer in energy for Urbaser S.A.<br><br>• Conducting energy audits<br>• Analyzing facilities<br>• Defining and monitoring energy KPIs<br>• Developing MAEs and optimizing consumption<br>• ISO 50001<br>•	Energy sector regulations<br>•    Review and coordination of the CAE processing procedure<br>•    Functioning of energy markets<br>•    Photovoltaic installation projects</p>
+                            </div>
+                        </div>
+						
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2024<br>-<br>2023</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Feasibility study EELISA<small>Curricular Internship</small></h3>
+                                <p>Internship at Polytechnic University of Madrid (UPM) in collaboration with the European Engineering Learning Innovation and Science Alliance (EELISA) from September 2023 to February 2024.</p>
+                            </div>
+                        </div>
+					
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2022</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Institute of Catalysis and Petrochemicals (IPC)<small>Curricular Internship</small></h3>
+                                <p>Curricular internship at the Consejo Superior de Investigaciones Científicas (CSIC) between February and May 2022.</p>
+                            </div>
+                        </div>
+					</div>
+					
+				</div>
+
+				<div class="col-lg-6 col-12 laboral" id="resume">
+                  <h2 class="mb-4 mobile-mt-2">Academic Education</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2024<br>-<br>2022</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Master in Energy Engineering. Specialization in Renewable Energies. Polytechnic University of Madrid</span><small></small></h3>
+                                  <p>Education at the Escuela Técnica Superior de Ingenieros Industriales (School of Industrial Engineering).</p>
+                             </div>
+                        </div>
+						
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2022</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Degree in Chemical Engineering. Polytechnic University of Madrid<small></small></h3>
+                                <p>Education completed at the Escuela Técnica Superior de Ingeniería y Diseño Industrial from September 2017 to July 2022.</p>
+                            </div>
+                        </div>
+						
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2017<br>-<br>2015</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Baccalaureate</span><small>Colegio Claret (Madrid)</small></h3>
+                                <p>I completed my high school studies from 2015 to 2017 at Colegio Claret in Madrid.</p>
+                            </div>
+						</div>
+							
+					</div>
+					
+				</div>
+			
+			</div>
+			
+		</div>
+	
+	</section>
+	
+	<!-- EXPERIENCIA -->
+    <section class="experience py-5 d-lg-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+				
+				<div class="col-lg-6 col-12 laboral" id="experience">
+                  <h2 class="mb-4 mobile-mt-2">Experience</h2>
+
+                    <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Teacher of the course "Arduino and Chemical Sensors".</span><small></small></h3>
+                                <p>In November 2021 I was a teacher in the course on Arduino and chemical sensors organized by the student section ISA ETSIDI and the student association CREA ETSIDI.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Mentoring Project</span><small></small></h3>
+                                <p>Participant as mentored from April to November 2021. Taught by Manuel Zafra Palacios and organized by the student section of the International Society of Automation (ISA) of ETSIDI.</p>
+                            </div>
+						</div>
+							
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Course "How can Biomass Contribute to Sustainability and Use of Renewables"</span><small></small></h3>
+                                <p>I completed this course in its entirety (50 hours) in September 2021, taught by Prof. Dr. Axel Blokesch, University of Applied Sciencies (Frankfurt).</p>
+                            </div>
+                        </div>
+	
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Course "Emerson" of Regulation & Control of Industrial Process</span><small></small></h3>
+                                <p>From March to May 2021 I took this course (3 hours per week) given by Emerson and organized by the ISA Student Section of ETSIDI.</p>
+                            </div>
+                        </div>
+								
+							
+                    </div>
+					
+				
+                <div class="col-lg-6 col-12 studies" id="knowledge">
+                  <h2 class="mb-4">Knowledge</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span><iconify-icon icon="line-md:document-code-twotone" height="65"></iconify-icon></span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Programming language and programs</span><small></small></h3>
+                                	<p>
+										<br>•	MS Office (Very high level)
+										<br>•	OriginLab
+										<br>•	C++
+										<br>•	AutoCAD
+										<br>•	MatLab
+										<br>•	EcosimPro
+										<br>•	Step 7
+										<br>•	ProMax
+										<br>•	Aspen Plus, Aspen Hysys
+										<br>•	Thermoflow
+										<br>•	LIDER-CALENDER (HULC)
+									</p>
+                             </div>
+                        </div>
+						
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span><iconify-icon icon="akar-icons:language" style="font-size: 65px;"></iconify-icon></span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Languages<small></small></h3>
+                                <p>
+										<br>•	Spanish (Native)
+										<br>•	English (C1)
+										<br>•	French (B1-B2)
+										<br><br>On several occasions I have had experiences abroad. In 2015 I did an exchange in Paris in order to improve my level of French. In addition, in 2015 and 2016 I did a linguistic immersion in English, in Ireland and in England.
+									</p>
+							</div>
+								
+						</div>
+							<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span><iconify-icon icon="mdi:information-variant-circle-outline" style="font-size: 65px;"></iconify-icon></span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Additional information<small></small></h3>
+                                <p>
+										<br>•	Active member of the ISA student section of ETSIDI.
+										<br>•	Active member of the Robotics, Electronics and Automation Club of ETSIDI, UPM.
+										<br>•	Driving license type B
+										<br>•	Aquatic lifeguard at national level. Real Federación Española de Salvamento y Socorrismo. Since 2016
+										<br>•	Flute studies (2nd professional studies). Professional Conservatory of Music Amaniel (2015-2018)
+									</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="abilities full-screen d-lg-flex justify-content-center align-items-center" id="abilities">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                
+                <div class="col-lg-8 col-md-12 col-12 d-flex justify-content-center align-items-center">
+                    <div class="about-text habilities">
+                       <center><h2 class="mb-4">Skills</h2></center>
+                        
+						<div class="row d-flex justify-content-center align-items-center" style="margin:auto;">
+							<i><p style="font-size:100%;">
+								<br>•	Teamwork
+								<br>•	Communication
+								<br>•	Generosity and tolerance
+								<br>•	Adaptation to the environment
+								<br>•	Organization
+								<br>•	Ability to learn and work
+								<br>•	Initiative
+							</p></i>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center"></iconify-icon><iconify-icon icon="cib:creative-commons-nc"></iconify-icon> <script>document.write(year)</script> Rafael Alférez.</p>
+                        <p class="copyright-text text-center">Original design <a rel="nofollow" href="https://www.tooplate.com/" target="_blank" rel="noopener noreferrer">Tooplate</a></p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/navbarfix.js"></script>
+
+  </body>
+</html>

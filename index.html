@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<meta name="robots" content="noindex,nofollow,noarchive,nocache,noimageindex,nosnippet">
+
+    <title>M. Esparcia - Currículum</title>
+	
+	<!-- AGE & YEAR OPERATIONS -->
+	<script>
+		var year=new Date().getFullYear();
+		var month=new Date().getMonth() + 1;
+		var day=new Date().getDate();
+		var age;
+			
+		if (month > 8){
+					
+			age = year - 1999;
+		}else{
+			if (month == 8 && day > 5){
+				age = year - 1999;
+			}else{
+				age = year - 2000;
+			}
+		}
+	</script>
+	
+	<!-- AUTOMATIC DARK MODE BY USER PREFERENCE SCRIPT -->
+	<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const colorModeIcon = document.querySelector('.color-mode-icon'); // Selecciona el icono
+
+            // Función para aplicar el tema oscuro si es necesario
+            function applyTheme() {
+                const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+                if (prefersDarkScheme.matches) {
+                    body.classList.add('dark-mode'); // Agrega la clase .dark-mode
+                    colorModeIcon.classList.add('active'); // Agrega la clase active al icono
+                } else {
+                    body.classList.remove('dark-mode'); // Elimina la clase .dark-mode
+                    colorModeIcon.classList.remove('active'); // Elimina la clase active del icono
+                }
+            }
+
+            // Llama a la función al cargar la página
+            applyTheme();
+
+            // Escucha cambios en la preferencia del tema
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', applyTheme);
+        });
+    </script>
+	
+	<!-- AUTOMATIC LANGUAGE CHANGE BASED ON USER MAIN LANGUAGE -->
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			// Función para redirigir según el idioma
+			function redirectBasedOnLanguage() {
+				const userLang = navigator.language || navigator.userLanguage; // Obtiene el idioma del navegador
+				const langPrefix = userLang.split('-')[0]; // Extrae el prefijo del idioma (por ejemplo, "en" de "en-US")
+
+				// Verifica si ya se ha guardado la preferencia de idioma
+				const savedLang = localStorage.getItem('preferredLanguage');
+
+				// Si no hay preferencia guardada y el idioma no es español
+				if (!savedLang && langPrefix !== 'es') {
+					window.location.href = 'index_en.html'; // Redirige a la versión en inglés
+				}
+			}
+
+			// Llama a la función al cargar la página
+			redirectBasedOnLanguage();
+
+			// Función para cambiar el idioma y guardar la preferencia
+			function changeLanguage(lang) {
+				localStorage.setItem('preferredLanguage', lang); // Guarda la preferencia de idioma
+				if (lang === 'en') {
+					window.location.href = 'index_en.html'; // Redirige a la versión en inglés
+				}
+			}
+
+			// Escucha el clic en el enlace de idioma
+			const languageLink = document.querySelector('.navbar-brand'); // Selecciona el enlace de idioma
+			languageLink.addEventListener('click', (event) => {
+				event.preventDefault(); // Previene la acción por defecto del enlace
+				changeLanguage('en'); // Cambia el idioma a inglés
+			});
+		});
+	</script>
+	
+	<!-- PRELOAD OF THINGS -->
+	
+		<!-- DNS -->
+		<link rel="dns-prefetch" href="//martitaswift.github.io"/>
+		<link rel="dns-prefetch" href="//github.com"/>
+	
+		<!-- Images -->
+		<link rel="preload" href="images/undraw/profileFN.png" as="image" type="png" />
+		<link rel="preload" href="images/undraw/icon.png" as="image" type="png" media="(max-width: 20px)" />
+		<link rel="preload" href="images/undraw/Urbaser-logotipo.png" as="image" type="png" />
+		<link rel="preload" href="images/undraw/Urbaser-logotipo-dark.svg" as="image" type="svg" />
+	
+		<!-- CSS -->
+		<link rel="preload" href="css/bootstrap.min.css" as="style" />
+		<link rel="preload" href="css/unicons.css" as="style" />
+		<link rel="preload" href="css/owl.carousel.min.css" as="style" />
+		<link rel="preload" href="css/owl.theme.default.min.css" as="style" />
+		<link rel="preload" href="css/dark.image.css" as="style" />
+		<link rel="preload" href="css/tooplate-style.css" as="style" />
+	
+		<!-- Scripts -->
+		<link rel="preload" href="js/jquery-3.3.1.min.js" as="script" />
+		<link rel="preload" href="js/popper.min.js" as="script" />
+		<link rel="preload" href="js/bootstrap.min.js" as="script" />
+		<link rel="preload" href="js/Headroom.js" as="script" />
+		<link rel="preload" href="js/jQuery.headroom.js" as="script" />
+		<link rel="preload" href="js/owl.carousel.min.js" as="script" />
+		<link rel="preload" href="js/smoothscroll.js" as="script" />
+		<link rel="preload" href="js/custom.js" as="script" />
+		<link rel="preload" href="js/navbarfix.js" as="script" />
+		
+		<link rel="preload" href="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js" as="script" />
+		<link rel="preload" href="https://code.iconify.design/2/2.2.1/iconify.min.js" as="script" />
+		<link rel="preload" href="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js" as="script" />
+		<link rel="preload" href="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" as="script" />
+		<link rel="preload" href="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" as="script" />
+	
+	<!-- PAGE ICON -->
+	<link rel="icon" href="images/undraw/icon.png">
+	
+	<!-- STYLES -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/dark.image.css">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+	
+	<!-- ICONS -->
+	<script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+	<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+	<script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+	<script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+	  
+	
+	<!--
+	
+					TE AMO MARTA <3 
+	
+		Gracias por existir, eres todo en mi vida
+	
+	-->
+
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            
+			<a href="index_en.html" rel="noopener noreferrer" class="navbar-brand"><iconify-icon icon="tabler:language" width="20" height="20"></iconify-icon><small> English</small></a>
+			
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link"><span data-hover="Sobre mí">Sobre mí</span></a>
+                    </li>
+					<li class="nav-item">
+                        <a href="#laboral" class="nav-link"><span data-hover="Laboral">Laboral</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link"><span data-hover="Académico">Académico</span></a>
+                    </li>
+					<li class="nav-item">
+                        <a href="#experience" class="nav-link"><span data-hover="Experiencia">Experiencia</span></a>
+                    </li><li class="nav-item">
+                        <a href="#knowledge" class="nav-link"><span data-hover="Conocimientos">Conocimientos</span></a>
+                    </li>
+					<li class="nav-item">
+                        <a href="#abilities" class="nav-link"><span data-hover="Aptitudes">Aptitudes</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Cambiar color
+                      </div>
+                    </div>
+                </ul>
+            </div>			
+        </div>
+    </nav>
+
+    <!-- SOBRE MÍ -->
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center top-fix" id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">Bienvenido a <span class="mobile-block">mi currículum</span></small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Soy</span>
+                                <div class="animated-info">
+									<span class="animated-item">Marta Esparcia</span>
+                                    <span class="animated-item">Ingeniera</span>
+                                </div>
+                        </h1>
+						
+                        <p class="presentation-text">Tengo <script>document.write(age)</script> años, soy Ingeniera Técnico Industrial titulada con especialidad en Química y máster en Energías Renovables por la Universidad Politécnica de Madrid.<br><br>Tengo un gran interés por el sector energético y la transformación hacia un futuro más sostenible. Poseo conocimientos específicos en energía, sobre todo las renovables y en eficiencia energética.<br><br>Destaco por mi capacidad para trabajar en equipo, mi organización y mis habilidades de comunicación.</p>
+
+						<div class="custom-btn-group mt-4">
+                          <a href="pdf/Marta.Esparcia.Lopez-Curriculum.pdf" target="_blank" rel="noopener noreferrer" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Descargar versión PDF</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image png">
+                    
+						<img src="images/undraw/profile.png" class="img-fluid" alt="png image">
+					
+					</div>
+				</div>
+            </div>
+        </div>
+    </section>
+	  
+    <!-- RESUMEN -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-6 col-12 laboral" id="laboral">
+                  <h2 class="mb-4 mobile-mt-2">Experiencia Laboral</h2>
+
+                    <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2025<br>-<br>2024</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span><img src="images/undraw/Urbaser-logotipo.svg" class="img-fluid imagelight" width="300" height="300"><img src="images/undraw/Urbaser-logotipo-dark.svg" class="img-fluid imagedark" width="300" height="300"><small>Departamento de Energía</small></h3>
+                                <p>Ingeniero técnico de energía para Urbaser S.A.<br><br>•	Realización de auditorías energéticas<br>•	Análisis de instalaciones<br>•	Definición y seguimiento de KPIs energéticos<br>•	Desarrollo de MAEs y optimización de consumos<br>•	ISO 50001<br>•	Normativa del sector energético<br>•	Revisión y coordinación del proceso de tramitación de CAEs<br>•	Funcionamiento de los mercados energéticos<br>•	Proyectos de instalaciones fotovoltaicas</p>
+                            </div>
+                        </div>
+					
+					<div class="timeline">
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2024<br>-<br>2023</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Estudio de viabilidad EELISA<small>Prácticas Curriculares</small></h3>
+                                <p>Prácticas curriculares realizadas en la Universidad Politécnica de Madrid (UPM) en colaboración con European Engineering Learning Innovation and Science Alliance (EELISA) de Septiembre de 2023 a Febrero de 2024.</p>
+                            </div>
+                        </div>
+						
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2022</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Instituto de Catálisis y Petroleoquímica (IPC)<small>Prácticas Curriculares</small></h3>
+                                <p>Practicas curriculares realizadas en el Consejo Superior de Investigaciones Científicas (CSIC) entre Febrero y Mayo de 2022.</p>
+                            </div>
+                        </div>
+							
+                    </div>
+					
+				</div>
+				
+				<div class="col-lg-6 col-12 laboral" id="resume">
+                  <h2 class="mb-4 mobile-mt-2">Formación Académica</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span>2024<br>-<br>2022</span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Master en Ingeniería de la Energía. Especialidad Energías Renovables. Universidad Politécnica de Madrid</span><small></small></h3>
+                                  <p>Estudios cursados en la Escuela Técnica Superior de Ingenieros Industriales.</p>
+                             </div>
+                        </div>
+						
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2022<br>-<br>2017</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Grado en Ingeniería Química. Universidad Politécnica de Madrid<small></small></h3>
+                                <p>Estudios completados en la Escuela Técnica Superior de Ingeniería y Diseño Industrial de Septiembre de 2017 a Julio de 2022</p>
+                            </div>
+                        </div>
+								
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2017<br>-<br>2015</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Bachillerato</span><small>Colegio Claret (Madrid)</small></h3>
+                                <p>Completé mis estudios de bachillerato de 2015 a 2017 en el Colegio Claret de Madrid.</p>
+                            </div>
+                        </div>
+							
+                    </div>
+					
+				</div>
+			
+			</div>
+		
+		</div>
+	
+	</section>
+	
+	<!-- EXPERIENCIA -->
+    <section class="experience py-5 d-lg-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="row">
+				
+				<div class="col-lg-6 col-12 laboral" id="experience">
+                  <h2 class="mb-4 mobile-mt-2">Experiencia</h2>
+
+                    <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Profesora del curso de "Arduino y Sensores Químicos"</span><small></small></h3>
+                                <p>En Novimbre de 2021 fui profesora en el curso sobre Arduino y sensores químicos organizado por la sección de estudiantes ISA ETSIDI y la asociación de estudiantes CREA ETSIDI</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Proyecto Mentoring</span><small></small></h3>
+                                <p>Participante como mentorizada de Abril a Noviembre de 2021. Impartido por Manuel Zafra Palacios y organizado por la sección de estudiantes de "International Society of Automation (ISA) de la ETSIDI.</p>
+                            </div>
+						</div>
+							
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Curso "How can Biomass Contribute to Sustainability and Use of Renewables"</span><small></small></h3>
+                                <p>Completé este curso en su totalidad (50 horas) en Septiembre de 2021, impartido por el Profesor Dr. Axel Blokesch, University of Applied Sciencies (Frankfurt).</p>
+                            </div>
+                        </div>
+	
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span>2021</span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Curso "Emerson" de Regulación y Control de Procesos Industriales</span><small></small></h3>
+                                <p>De Marzo a Mayo de 2021 realicé este curso (3 horas semanales) impartido por Emerson y organizado por la Sección de estudiantes de ISA de la ETSIDI.</p>
+                            </div>
+                        </div>
+							
+                    </div>
+				
+                <div class="col-lg-6 col-12 studies" id="knowledge">
+                  <h2 class="mb-4">Conocimientos</h2>
+
+                    <div class="timeline">
+                        <div class="timeline-wrapper">
+                             <div class="timeline-yr">
+                                  <span><iconify-icon icon="line-md:document-code-twotone" height="65"></iconify-icon></span>
+                             </div>
+                             <div class="timeline-info">
+                                  <h3><span>Lenguaje de programación y programas</span><small></small></h3>
+                                	<p>
+										<br>•	MS Office (Nivel muy alto)
+										<br>•	OriginLab
+										<br>•	C++
+										<br>•	AutoCAD
+										<br>•	MatLab
+										<br>•	EcosimPro
+										<br>•	Step 7
+										<br>•	ProMax
+										<br>•	Aspen Plus, Aspen Hysys
+										<br>•	Thermoflow
+										<br>•	LIDER-CALENDER (HULC)
+									</p>
+                             </div>
+                        </div>
+						
+						<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span><iconify-icon icon="akar-icons:language" style="font-size: 65px;"></iconify-icon></span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Idiomas<small></small></h3>
+                                <p>
+										<br>•	Español (Nativo)
+										<br>•	Inglés (C1)
+										<br>•	Francés (B1-B2)
+										<br><br>En varias ocasiones he realizado experiencias en el extranjero. En 2015 hice un intercambio en París con el fin de mejorar mi nivel de francés. Además, en 2015 y en 2016 realicé una inmersión lingüistica en inglés, en Irlanda y en Inglaterra.
+									</p>
+							</div>
+								
+						</div>
+							<div class="timeline-wrapper">
+                            <div class="timeline-yr">
+                                <span><iconify-icon icon="mdi:information-variant-circle-outline" style="font-size: 65px;"></iconify-icon></span>
+                            </div>
+                            <div class="timeline-info">
+                                <h3><span>Información adicional<small></small></h3>
+                                <p>
+										<br>•	Miembro activo de la sección de estudiantes de la ISA de la ETSIDI
+										<br>•	Miembro activo del Club de Robótica, Electrónica y Automática de la ETSIDI, UPM.
+										<br>•	Carné de conducir tipo B
+										<br>•	Socorrista acuático a nivel nacional. Real Federación Española de Salvamento y Socorrismo. Desde 2016
+										<br>•	Estudios flauta travesera (2º enseñanzas profesionales). Conservatorio Profesional de Música Amaniel (2015-2018)
+									</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+    </section>
+
+    <!-- HABILIDADES -->
+    <section class="abilities full-screen d-lg-flex justify-content-center align-items-center" id="abilities">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                
+                <div class="col-lg-8 col-md-12 col-12 d-flex justify-content-center align-items-center">
+                    <div class="about-text abilities">
+                       <center><h2 class="mb-4">Aptitudes</h2></center>
+							<div class="row d-flex justify-content-center" style="margin:auto;">
+								<i><p style="font-size:100%;">
+										<br>•	Trabajo en equipo
+										<br>•	Comunicación
+										<br>•	Generosidad y tolerancia
+										<br>•	Adaptación al medio
+										<br>•	Organización
+										<br>•	Capacidad de aprendizaje y trabajo
+										<br>•	Iniciativa
+									</p></i>
+								</div>
+								
+							</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	  
+    <!-- PIE DE PÁGINA -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center"></iconify-icon><iconify-icon icon="cib:creative-commons-nc"></iconify-icon> <script>document.write(year)</script> Rafael Alférez.</p>
+                        <p class="copyright-text text-center">Diseño original de <a rel="nofollow" href="https://www.tooplate.com/" target="_blank" rel="noopener noreferrer">Tooplate</a></p>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/navbarfix.js"></script>
+
+  </body>
+</html>
